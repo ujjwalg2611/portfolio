@@ -1,0 +1,198 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+
+.projects-container .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.projects-container .projects-grid .project {
+    text-align: left;
+}
+
+.project h2:hover {
+    text-decoration: underline;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.zoom {
+    border-radius: 5px;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+}
+
+@media screen {
+    @media (max-width: 700px) {
+        .projects-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .projects-container .projects-grid {
+            display: block;
+        }
+
+        .projects-container .projects-grid .project {
+            padding-bottom: 5%;
+        }
+    }
+}
+
+/* ===== UJJWAL PROJECT CARDS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.project-card-ujjwal {
+    background: rgba(80, 0, 202, 0.10);
+    border: 1px solid rgba(80, 0, 202, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    cursor: default;
+
+    &:hover {
+        box-shadow: 0 0 24px rgba(80, 0, 202, 0.35);
+    }
+
+    /* force all text white in dark mode */
+    h2, p, li {
+        color: #ffffff !important;
+    }
+}
+
+.project-terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(80, 0, 202, 0.25);
+    padding: 8px 14px;
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        &.red    { background: #ff5f57; }
+        &.yellow { background: #febc2e; }
+        &.green  { background: #28c840; }
+    }
+
+    .terminal-name {
+        font-size: 0.8rem;
+        opacity: 0.7;
+        margin-left: 6px;
+        font-family: 'Courier Prime', monospace;
+        color: #ffffff !important;
+    }
+}
+
+.project-body {
+    padding: 20px;
+
+    h2 { margin-top: 0; font-size: 1.3rem; }
+}
+
+.project-tagline {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.project-bullets {
+    padding-left: 18px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+
+    li { margin-bottom: 6px; }
+}
+
+.project-stack {
+    margin: 12px 0;
+}
+
+/* Tech stack chips inside project cards — dark bg, white text always */
+.project-card-ujjwal .project-stack .MuiChip-root {
+    background-color: rgba(80, 0, 202, 0.5) !important;
+    border: 1px solid rgba(80, 0, 202, 0.7) !important;
+
+    span {
+        color: #ffffff !important;
+        font-family: 'Courier Prime', monospace;
+    }
+}
+
+.project-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.85rem;
+        color: #9b72f5 !important;
+
+        &:hover { color: #c4a4ff !important; }
+
+        svg { color: #9b72f5 !important; }
+    }
+}
+
+/* ===== LIGHT MODE OVERRIDES FOR PROJECT CARDS ===== */
+.light-mode .project-card-ujjwal {
+    background: #ffffff;
+    border: 1px solid rgba(80, 0, 202, 0.3);
+    box-shadow: 0 2px 12px rgba(80, 0, 202, 0.08);
+
+    h2, p, li {
+        color: #0d1116 !important;
+    }
+
+    .project-terminal-bar {
+        background: rgba(80, 0, 202, 0.12);
+
+        .terminal-name {
+            color: #0d1116 !important;
+        }
+    }
+
+    .project-tagline {
+        color: #444 !important;
+    }
+
+    .project-bullets li {
+        color: #333 !important;
+    }
+
+    .project-stack .MuiChip-root {
+        background-color: rgba(80, 0, 202, 0.12) !important;
+        border: 1px solid rgba(80, 0, 202, 0.3) !important;
+
+        span {
+            color: #5000ca !important;
+        }
+    }
+
+    .project-links a {
+        color: #5000ca !important;
+
+        svg { color: #5000ca !important; }
+
+        &:hover { color: #3800a0 !important; }
+    }
+}
