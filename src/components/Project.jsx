@@ -22,21 +22,6 @@ const projects = [
     live: null,
   },
   {
-    name: "Wanderly",
-    tagline: "Real-time collaborative travel itinerary planner",
-    desc: "Full-stack MERN travel planner with an AI recommendation engine and live multi-user editing — built so a group can plan a trip together without ten versions of the same spreadsheet.",
-    bullets: [
-      "AI-powered recommendation engine generating day-wise morning/afternoon/evening plans from destination, budget, and interests",
-      "Real-time collaborative editing via Socket.io rooms — multiple users co-plan itineraries with live sync",
-      "Social layer (follow system, activity feed, likes/comments) plus expense tracking with Recharts visualization",
-      "JWT auth with bcrypt, 10+ route REST API spanning trips, itineraries, expenses, social, and recommendations",
-    ],
-    stack: ["React.js", "Node.js", "Express.js", "Socket.io", "MongoDB", "JWT", "Tailwind"],
-    status: "Completed",
-    github: "https://github.com/ujjwalg2611/wanderly-travel-planner",
-    live: null,
-  },
-  {
     name: "Dijkstra Visualizer",
     tagline: "Interactive shortest-path algorithm visualizer",
     desc: "A grid-based visualization platform for Dijkstra's algorithm — built to make graph traversal something you can watch happen, not just read about.",
